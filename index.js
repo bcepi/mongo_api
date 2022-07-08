@@ -50,12 +50,13 @@ app.get("/koders", async (request, response) =>{
     // const koders = await Koders.find({}) //promesa
     // console.log(koders)
 
+    const id = request.params
     //Vamos a utilizar el modelo .findById para acceder a un koder
-    const koderID = await Koders.findById("62c63374102f8c84ab5ac5dc")
+    const koderID = await Koders.findById(id)
     console.log(koderID)
 
     response.json({
-        "message" : " El endpoint koders funciona"
+        "message" : " El endpoint kodersID funciona"
     })
 })
 
